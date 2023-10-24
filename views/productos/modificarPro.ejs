@@ -1,0 +1,24 @@
+<%- include("../templates/encabezado.ejs")%>
+<%- include("../templates/menu.ejs")%>
+
+<div class="container mt-5">
+    <form action="/pro/editarPr" method="post">
+        <div class="card">
+            <div class="card-header">
+                <h1>Modificar Usuario</h1>
+            <div class="card-body">
+                <input type="hidden" name="id" id="id" value="<%= producto.id%>" >
+                <input class="form-control mb-3" type="text" value="<%= producto.nombre%>" name="nombre" id="nombre" placeholder="Nombre" autofocus>
+                <input class="form-control mb-3" type="text" value="<%= producto.descripcion%>" name="descripcion" id="descripcion" placeholder="Descripcion">
+                <input class="form-control mb-3" type="text" value="<%= producto.precio%>" name="precio" id="precio" placeholder="Precio">
+            </div>
+            <div class="card-footer">
+                <button class="form-control btn btn-primary" type="submit">Modificar Usuario</button>
+            </div>
+            
+            </div>
+        </div>
+    </form>
+</div>
+
+<%- include("../templates/pie")%>
